@@ -1,0 +1,143 @@
+:root {
+    --root-font-size: 1.4rem;
+    --color-dark: #090909;
+    --color-light: #fff;
+    --color-brand: #7effb2;
+    --color-brand-alt: #2cd9ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: var(--root-font-size);
+    background-color: var(--color-dark);
+}
+
+.cards {
+    display: grid;
+    gap: 2rem;
+    max-width: 48rem;
+    padding: 2rem;
+    margin-inline: auto;
+}
+
+.title {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    padding-left: 2rem;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    background-image: linear-gradient(90deg, var(--color-brand-alt), var(--color-brand));
+    border-radius: 50%;
+}
+
+.card {
+    position: relative;
+    background-color: var(--color-dark);
+    padding: 2rem;
+    border: 0.2rem solid rgb(255 255 255 / 10%);
+    border-radius: 1.8rem;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.card__metadata {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-light);
+    margin-bottom: 2.5rem;
+}
+
+.card__icon {
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    border: 0.2rem solid rgb(255 255 255 / 10%);
+    border-radius: 50%;
+}
+
+@supports (-webkit-background-clip: text) {
+    .card__icon i {
+        background-image: linear-gradient(120deg, #eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.card__description {
+    grid-column: 1/-1;
+    color: #eee;
+}
+
+.card__button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    background-color: var(--color-brand);
+    background-image: linear-gradient(90deg, var(--color-brand-alt), var(--color-brand));
+    color: var(--color-dark);
+    font-size: 1.2rem;
+    padding: 0.8rem 1.4rem;
+    border-radius: 0.8rem;
+    isolation: isolate;
+}
+
+.card__button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(90deg, var(--color-brand), var(--color-brand-alt));
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.card__button:hover::before {
+    opacity: 1;
+}
+
+.card__button-icon {
+    display: inline-flex;
+    font-size: 1.6rem;
+    padding-right: 0.5rem;
+    border-right: 1px solid var(--color-dark);
+}
+
+.card__button-icon i {
+    margin-block: auto;
+}
+
+@media (min-width: 31.25em) {
+    :root {
+        --root-font-size: 1.6rem;
+    }
+
+    .card__button {
+        font-size: 1.4rem;
+    }
+}
