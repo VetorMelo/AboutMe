@@ -12,6 +12,14 @@
     box-sizing: border-box;
 }
 
+.foto-perfil{
+    height: 300px;
+    width: 60%;
+    max-width: 600px;
+    border-radius: 20px 100px 100px 100px;
+    border: solid rgb(47, 207, 212);
+}
+
 html {
     font-size: 62.5%;
 }
