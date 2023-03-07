@@ -20,6 +20,11 @@
     border: solid rgb(47, 207, 212);
 }
 
+.subtitulo{
+    color: white;
+    
+}
+
 html {
     font-size: 62.5%;
 }
