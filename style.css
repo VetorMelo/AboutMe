@@ -13,6 +13,7 @@
 }
 
 .foto-perfil{
+    background-image:url(img/fotoperfil.jpg) ;
     height: 300px;
     width: 60%;
     position: relative;
