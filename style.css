@@ -12,17 +12,6 @@
     box-sizing: border-box;
 }
 
-.foto-perfil{
-    background-image:url(img/fotoperfil.jpg) ;
-    height: 300px;
-    width: 60%;
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-radius: 20px 100px 100px 100px;
-    border: solid rgb(47, 207, 212);
-}
-
 .subtitulo{
     color: white;
 }
